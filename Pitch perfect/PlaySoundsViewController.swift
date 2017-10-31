@@ -10,13 +10,36 @@ import UIKit
 
 class PlaySoundsViewController: UIViewController {
    
+
+    @IBOutlet weak var snailButton: UIButton!
+    @IBOutlet weak var rabbitButton: UIButton!
+    @IBOutlet weak var chipmunkButton: UIButton!
+    @IBOutlet weak var dartVadorButton: UIButton!
+    @IBOutlet weak var birdButton: UIButton!
+    @IBOutlet weak var soundWavesButton: UIButton!
+    @IBOutlet weak var StopButton: UIButton!
+    
     var recordAudioURL : URL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        snailButton.contentMode = .center
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.contentMode = .center
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.contentMode = .center
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        dartVadorButton.contentMode = .center
+        dartVadorButton.imageView?.contentMode = .scaleAspectFit
+        birdButton.contentMode = .center
+        birdButton.imageView?.contentMode = .scaleAspectFit
+        soundWavesButton.contentMode = .center
+        soundWavesButton.imageView?.contentMode = .scaleAspectFit
+        StopButton.contentMode = .center
+        StopButton.imageView?.contentMode = .scaleAspectFit
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
