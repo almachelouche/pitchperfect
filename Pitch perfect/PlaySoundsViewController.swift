@@ -20,7 +20,14 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var StopButton: UIButton!
     
     var recordAudioURL : URL!
-
+    
+    @IBAction func playSoundForButton(_sender: UIButton){
+        print("Play sound button pressed")
+    }
+    @IBAction func stopButtonPressed (_sender: UIButton){
+        print("stop audio button pressed")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         snailButton.contentMode = .center
