@@ -183,7 +183,6 @@
                         <outlet property="rabbitButton" destination="3vv-xZ-Skg" id="pRT-W9-Ns4"/>
                         <outlet property="snailButton" destination="c35-Mo-8tc" id="F7Q-w9-xkM"/>
                         <outlet property="soundWavesButton" destination="5A7-Zd-u6H" id="dIW-sT-CBO"/>
-                        <outletCollection property="audioPlayButton" destination="KJU-sq-ixL" id="zfd-A1-XYE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hp1-2r-KVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
