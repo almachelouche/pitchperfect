@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
-   
+  
+    var recordAudioURL : URL!
 
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
@@ -27,13 +28,25 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer: Timer!
     
     enum ButtonType: Int {
-        case slow = 0, fast, chipmunk, vader, echo, reverb
-    }
+        case slow = 0, fast, chipmunk, vader, echo, reverb}
     
-    var recordAudioURL : URL!
-    
-    @IBAction func playSoundForButton(_sender: UIButton){
-        print("Play sound button pressed")
+    @IBAction func playSoundForButton(_ sender: UIButton){
+        switch(ButtonType(rawValue: sender.tag)!) {
+        case .slow:
+            playSound(rate: 0.5)
+        case .fast:
+            playSound(rate: 1.5)
+        case .chipmunk:
+            playSound(pitch: 1000)
+        case .vader:
+            playSound(pitch: -1000)
+        case .echo:
+            playSound(echo: true)
+        case .reverb:
+            playSound(reverb: true)
+        }
+        
+        configureUI(.playing)
     }
     @IBAction func stopButtonPressed (_sender: UIButton){
         print("stop audio button pressed")
